@@ -19,14 +19,14 @@ exports.AdvisorsModel = mongoose.model("advisorss",advisorSchema)
 exports.validateAdvisors = (_reqBody) => {
 let joiSchema = Joi.object({
 userID:Joi.string().min(2).max(100).required(),
-name:Joi.string().min(2).max(100).required(),
-img_url:Joi.string().min(1).max(1500).required(),
+name:Joi.string().min(2).max(20).required(),
+img_url:Joi.string().min(1).max(100).required(),
 info:Joi.string().min(2).max(2500).required(),
-dateCreated:Joi.date().min(2).max(100).required(),
+dateCreated:Joi.date().min(2).max(20).required(),
 exprinced_year:Joi.number().min(0).max(20).required(),
 location:Joi.string().min(2).max(1000).required(),
-disease_ids :Joi.array().min(2).max(2000).required(),
-phone:Joi.string().min(2).max(999).required(),
+disease_ids :Joi.array().min(2).max(20).required(),
+phone:Joi.string().min(2).max(20).required(),
 })
 return joiSchema.validate(_reqBody)
 }
