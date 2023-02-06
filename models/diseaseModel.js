@@ -9,8 +9,8 @@ exports.DiseasesModel = mongoose.model("diseasess",diseaseSchema)
 
 exports.validateJoi = (_reqBody) => {
 let joiSchema = Joi.object({
-name:Joi.string().min(2).max(999).required(),
-info:Joi.string().min(2).max(3000).required(),
+name:Joi.string().min(2).max(50).required(),
+info:Joi.string().min(2).max(1500).required(),
 })
 return joiSchema.validate(_reqBody)
 }

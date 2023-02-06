@@ -4,6 +4,7 @@ const diseaseR=require("./diseaseRoute");
 const postsR=require("./postsRoute");
 const usersR=require("./usersRoute");
 const couponsR=require("./couponsRoute");
+const category_couponsR=require("./category_couponsRoute");
 
 
 exports.routesInit = (app) => {
@@ -13,6 +14,8 @@ exports.routesInit = (app) => {
   app.use("/posts" , postsR);
   app.use("/users" , usersR);
   app.use("/coupons" , couponsR);
+  app.use("/category_coupons" , category_couponsR);
+
 
 
 }

@@ -11,7 +11,7 @@ type:Date , default:Date.now
 },
 exprinced_year:Number,
 location:String,
-Disease_ids :Array,
+disease_ids :Array,
 phone:String,
 })
 exports.AdvisorsModel = mongoose.model("advisorss",advisorSchema)
@@ -25,7 +25,7 @@ info:Joi.string().min(2).max(2500).required(),
 dateCreated:Joi.date().min(2).max(100).required(),
 exprinced_year:Joi.number().min(0).max(20).required(),
 location:Joi.string().min(2).max(1000).required(),
-Disease_ids :Joi.array().min(2).max(2000).required(),
+disease_ids :Joi.array().min(2).max(2000).required(),
 phone:Joi.string().min(2).max(999).required(),
 })
 return joiSchema.validate(_reqBody)
