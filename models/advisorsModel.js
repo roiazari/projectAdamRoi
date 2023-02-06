@@ -24,7 +24,7 @@ img_url:Joi.string().min(1).max(100).required(),
 info:Joi.string().min(2).max(2500).required(),
 dateCreated:Joi.date().min(2).max(20).required(),
 exprinced_year:Joi.number().min(0).max(20).required(),
-location:Joi.string().min(2).max(1000).required(),
+location:Joi.string().min(2).max(20).required(),
 disease_ids :Joi.array().min(2).max(20).required(),
 phone:Joi.string().min(2).max(20).required(),
 })
