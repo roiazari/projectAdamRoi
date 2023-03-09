@@ -20,7 +20,7 @@ link_url:String,
 })
 exports.CouponsModel = mongoose.model("couponss",couponSchema)
 
-exports.validateJoi = (_reqBody) => {
+exports.validateCoupons = (_reqBody) => {
 let joiSchema = Joi.object({
 title:Joi.string().min(2).max(100).required(),
 img_url:Joi.string().min(2).max(200).required(),
@@ -32,5 +32,5 @@ lon:Joi.number().min(2).max(10).required(),
 up_to_date:Joi.date().min(2).max(20).required(),
 link_url:Joi.string().min(2).max(100).required(),
 })
-return joiSchema.validate(_reqBody)
+return joiSchema.validate(_reqBody);
 }

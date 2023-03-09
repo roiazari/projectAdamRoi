@@ -10,7 +10,7 @@ const category_couponsR=require("./category_couponsRoute");
 exports.routesInit = (app) => {
   app.use("/",indexR);
   app.use("/advisors" , advisorsR);
-  app.use("/disease" , diseaseR);
+  app.use("/diseases" , diseaseR);
   app.use("/posts" , postsR);
   app.use("/users" , usersR);
   app.use("/coupons" , couponsR);
